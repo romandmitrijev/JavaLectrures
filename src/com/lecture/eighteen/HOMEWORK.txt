@@ -1,0 +1,9 @@
+1.  CREATE PERSON CLASS
+    it will contain name and age field,
+    create constructor.
+
+2.  CREATE ANOTHER CLASS
+    it will contain main method.
+    you will create 5 person objects.
+    put them in the Arraylist
+    then print them out.

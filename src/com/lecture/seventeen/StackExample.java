@@ -10,7 +10,7 @@ public class StackExample {
         stackOfCards.push("King");
         stackOfCards.push("Ace");
 
-        System.out.println(stackOfCards.toString());
+        System.out.println(stackOfCards);
 
         String theLastInfo = stackOfCards.pop();
         System.out.println(theLastInfo);
