@@ -1,13 +1,12 @@
 package com.lecture.nineteen;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Product {
     private String productName;
     private double productPrice;
 
-    public Product(String productName, double productPrice) {
-        this.productName = productName;
-        this.productPrice = productPrice;
-    }
 
     public String getProductName() {
         return productName;
@@ -31,6 +30,9 @@ public class Product {
             return false;
         }return true;
 
+    }
+    public Double round(Double val) {
+        return new BigDecimal(val.toString()).setScale(2, RoundingMode.HALF_UP).doubleValue();
     }
 
 
