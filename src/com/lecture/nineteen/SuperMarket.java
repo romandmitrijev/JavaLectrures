@@ -20,8 +20,12 @@ public class SuperMarket {
      * This method will insert product. If product exists it will not add.
      * It will print an error
      */
-    public void insertPruduct(Product incomingProduct) {
+    public void insertProduct(Product incomingProduct) {
         listOfProducts.add(incomingProduct);
+
+    }
+    public void removeProduct(int indexOfProduct){
+        listOfProducts.remove(indexOfProduct);
     }
 
 
