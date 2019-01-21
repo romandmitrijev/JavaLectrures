@@ -7,6 +7,14 @@ import java.util.List;
 public class SuperMarket {
     private List<Product> listOfProducts = new ArrayList<>();
 
+    public List<Product> getListOfProducts() {
+        return listOfProducts;
+    }
+
+    public void setListOfProducts(List<Product> listOfProducts) {
+        this.listOfProducts = listOfProducts;
+    }
+
     public void printAllProducts() {
         for (int counter = 0; counter < listOfProducts.size(); counter++) {
 

@@ -1,6 +1,5 @@
 package com.lecture.nineteen;
 
-import com.lecture.thirteen.Account;
 
 import java.util.Scanner;
 
@@ -34,8 +33,38 @@ public class SuperMarketApplication {
         superMarket.printAllProducts();
         System.out.println("Please enter your budget");
         double budget = scanner.nextDouble();
-        Account account = new Account(budget);
+        com.lecture.nineteen.Account account = new Account(budget);
         System.out.println("Your budget is " + account.getBalance());
+
+        while (true) {
+            System.out.println("What do you want to buy (done = finished buying)");
+            String requestedItem = scanner.next();
+            if (requestedItem.equalsIgnoreCase("done")) {
+
+                break;
+            }
+            int locatedIndex = superMarket.getIndexOfProduct(requestedItem);
+            if (locatedIndex == -1) {
+                System.out.println("This item does not exists");
+            } else {
+                SuperMarketUtilities superMarketUtilities = new SuperMarketUtilities();
+                Product selectedProduct = superMarket.getListOfProducts().get(locatedIndex);
+                System.out.println("How many of" + selectedProduct + " do you want");
+
+                int requestedQuantity = scanner.nextInt();
+
+                double totalCost = selectedProduct.getPrice() * requestedQuantity; // can be done as * (new Double(requestedQuantity)
+                totalCost = superMarketUtilities.round(totalCost);
+                account.deduct(totalCost);
+                boolean isEnoughMoney = account.deduct(totalCost);
+                if (isEnoughMoney) {
+                    account.addUpdateProducts(selectedProduct.getName(),requestedQuantity);
+                }
+
+
+            }
+        }
+        account.printAccountInfo();
 
     }
 
