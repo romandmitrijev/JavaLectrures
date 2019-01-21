@@ -61,7 +61,6 @@ public class SuperMarketApplication {
 
     private void removeProduct(SuperMarket superMarket) {
         Scanner scanner = new Scanner(System.in);
-        SuperMarket superMarket1 = new SuperMarket();
         System.out.println("Please enter product to remove: ");
         superMarket.printAllProducts();
         String incomingProductName = scanner.next();

@@ -24,8 +24,10 @@ public class SuperMarket {
         listOfProducts.add(incomingProduct);
 
     }
+
     public void removeProduct(int indexOfProduct){
         listOfProducts.remove(indexOfProduct);
+
     }
 
 
