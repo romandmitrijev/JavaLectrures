@@ -1,37 +1,30 @@
 package com.lecture.nineteen;
 
 public class Product {
-    private String productName;
-    private double productPrice;
+    private String name;
+    private double price;
 
-    public Product(String productName, double productPrice) {
-        this.productName = productName;
-        this.productPrice = productPrice;
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getName() {
+        return name;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public double getProductPrice() {
-        return productPrice;
+    public double getPrice() {
+        return price;
     }
 
-    public void setProductPrice(double productPrice) {
-        this.productPrice = productPrice;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public boolean validateProductName(String productName) {
-        if (productName == null || productName.isEmpty()) {
-            System.out.println("There is nothing in the list right now");
-            return false;
-        }return true;
-
-    }
 
 
 }

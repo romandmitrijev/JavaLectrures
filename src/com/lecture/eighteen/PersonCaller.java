@@ -41,6 +41,7 @@ public class PersonCaller {
         personList.add(person3);
         personList.add(person4);
 
+
         for (Person someone : personList) {
             System.out.println(someone.getName() + " " + someone.getAge());
         }
