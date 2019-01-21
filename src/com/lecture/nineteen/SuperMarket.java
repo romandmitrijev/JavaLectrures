@@ -10,8 +10,8 @@ public class SuperMarket {
     public void printAllProducts() {
         for (int counter = 0; counter < listOfProducts.size(); counter++) {
 
-            Product exstingProduct = listOfProducts.get(counter);
-            System.out.println(exstingProduct.getName() + " " + exstingProduct.getPrice());
+            Product existingProduct = listOfProducts.get(counter);
+            System.out.println(existingProduct.getName() + " " + existingProduct.getPrice());
 
         }
     }
@@ -35,7 +35,7 @@ public class SuperMarket {
         for (int counter = 0; counter < listOfProducts.size(); counter++) {
             Product product = listOfProducts.get(counter);
             String nameOfThisProduct = product.getName();
-            if (product.getName().equalsIgnoreCase(incomingProductName)) {
+            if (nameOfThisProduct.equalsIgnoreCase(incomingProductName)) {
                 return counter;
             }
         }

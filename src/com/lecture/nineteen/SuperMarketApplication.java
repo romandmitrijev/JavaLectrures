@@ -1,5 +1,7 @@
 package com.lecture.nineteen;
 
+import com.lecture.thirteen.Account;
+
 import java.util.Scanner;
 
 public class SuperMarketApplication {
@@ -30,7 +32,10 @@ public class SuperMarketApplication {
         }
 
         superMarket.printAllProducts();
-
+        System.out.println("Please enter your budget");
+        double budget = scanner.nextDouble();
+        Account account = new Account(budget);
+        System.out.println("Your budget is " + account.getBalance());
 
     }
 
@@ -53,6 +58,8 @@ public class SuperMarketApplication {
 
             //We are good to go, there is no product with this name
             superMarket.insertProduct(insertableProduct);
+
+
 
         } else {
             System.out.println("This product already exists.");
