@@ -27,13 +27,10 @@ public class Account {
         double threshold = .0001;
         com.lecture.twelve.SuperMarketUtilities superMarketUtilities = new SuperMarketUtilities();
         if (Math.abs(balance - cost) < threshold) {
-            System.out.println("There is enough balance");
             balance = balance - cost;
             balance = superMarketUtilities.round(balance);
-
             return true;
         } else if (balance > cost) {
-            System.out.println("There is enough balance");
             balance = balance - cost;
             balance = superMarketUtilities.round(balance);
             return true;

@@ -55,7 +55,6 @@ public class SuperMarketApplication {
 
                 double totalCost = selectedProduct.getPrice() * requestedQuantity; // can be done as * (new Double(requestedQuantity)
                 totalCost = superMarketUtilities.round(totalCost);
-                account.deduct(totalCost);
                 boolean isEnoughMoney = account.deduct(totalCost);
                 if (isEnoughMoney) {
                     account.addUpdateProducts(selectedProduct.getName(),requestedQuantity);

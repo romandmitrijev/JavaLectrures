@@ -5,5 +5,5 @@
 2.  CREATE ANOTHER CLASS
     it will contain main method.
     you will create 5 person objects.
-    put them in the Arraylist
+    put them id the Arraylist
     then print them out.
