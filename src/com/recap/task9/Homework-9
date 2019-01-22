@@ -1,0 +1,16 @@
+Create a class.
+This class will have main method.
+request sentence from the user
+
+ask the char which you are looking for
+print amount of that char inside the sentence
+
+
+Example:
+Murat asdasdas ds
+
+enter the char which you are looking for
+M
+Result is 1
+
+

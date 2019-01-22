@@ -1,0 +1,18 @@
+Create a class.
+This class will have main method.
+print user to get a number double
+assign it to double variable
+
+print user to get a second number double
+assign it to double variable
+
+
+multiply these 2 numbers
+
+if it is bigger then 1000 below 2000 included
+print you are it is between 1000-2000 included.
+if below 1000
+print it is below 1000
+if above 2000
+then print above 2000
+

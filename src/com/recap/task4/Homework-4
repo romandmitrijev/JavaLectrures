@@ -1,0 +1,7 @@
+Create a class.
+This class will have main method.
+print user to get a password
+If password is password then ask for second password
+If second password is password2 then say welcome the user
+
+Give detailed response of which password is wrong. Check screenshots.

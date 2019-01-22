@@ -1,0 +1,14 @@
+Create a class.
+This class will have main method.
+print user to get a number
+return the factorial of that number.
+
+If number is 0 return 1
+if number is negative return error message.
+if number is positive return the factorial number.
+if it is -1 exit. -1 is a special command.
+
+5! = 5*4*3*2*1 = 120
+3! = 3*2*1 = 6
+1! = 1
+...

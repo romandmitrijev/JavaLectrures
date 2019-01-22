@@ -1,0 +1,8 @@
+Create a class.
+This class will have main method.
+print user to get 1 number
+assign it to a integer variable
+print user to get the 2nd number
+assign it to a integer variable
+
+find which integer is bigger and print both integer and state which one is bigger. If same then say same

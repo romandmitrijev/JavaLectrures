@@ -1,0 +1,15 @@
+Create a class.
+This class will have main method.
+Print the welcome message.
+Get user input.
+
+If the user input is James Bond then print "Welcome 007. " (case insensitive)
+
+
+
+To do this:
+
+You should know how to do terminal print.
+To know how to use the scanner
+how to check string equal value (case insensitive)
+
