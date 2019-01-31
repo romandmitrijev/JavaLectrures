@@ -1,10 +1,7 @@
 package com.recap.task9;
 
-
-import com.sun.deploy.util.StringUtils;
-
 import java.util.Scanner;
-
+//done*
 public class HomeworkNine {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

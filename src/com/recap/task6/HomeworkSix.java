@@ -1,7 +1,7 @@
 package com.recap.task6;
 
 import java.util.Scanner;
-
+//done
 public class HomeworkSix {
     private static void printArray(String[] anArray, int index) {
         System.out.println(anArray[index]);
@@ -18,6 +18,7 @@ public class HomeworkSix {
             } else {
                 String[] words = userInput.split(" ");
                 printArray(words, 0);
+
             }
 
         }

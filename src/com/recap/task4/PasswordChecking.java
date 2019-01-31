@@ -1,7 +1,7 @@
 package com.recap.task4;
 
 import java.util.Scanner;
-
+//done
 public class PasswordChecking {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

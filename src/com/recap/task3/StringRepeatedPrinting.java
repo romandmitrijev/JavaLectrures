@@ -1,7 +1,7 @@
 package com.recap.task3;
 
 import java.util.Scanner;
-
+//done
 public class StringRepeatedPrinting {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

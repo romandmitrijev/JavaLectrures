@@ -6,7 +6,6 @@ public class HomeworkSeven {
     private static void printArray(String[] anArray, int index) {
         System.out.println(anArray[index]);
     }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome stranger.");
@@ -19,17 +18,16 @@ public class HomeworkSeven {
                 String[] words = userInput.split(" ");
                 System.out.println("Which order of sentence you want to print?");
 
-                int orderInput = scanner.nextInt();
-                if (orderInput > words.length) {
+                String orderInput = scanner.nextLine();
+                int parsedString = Integer.parseInt(orderInput);
+                if (parsedString > words.length) {
                     System.out.println("Sentence does not have this much of words.");
-                } else if (orderInput < 1) {
+                } else if (parsedString < 1) {
                     System.out.println("We don't accept 0 or negative numbers");
                 } else {
-                    printArray(words, (orderInput - 1));
+                    printArray(words, (parsedString - 1));
                 }
-
             }
-
         }
     }
 }
