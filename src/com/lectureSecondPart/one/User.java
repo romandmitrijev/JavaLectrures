@@ -1,4 +1,4 @@
-package com.lectureSecondPart;
+package com.lectureSecondPart.one;
 
 public class User {
     private String email;

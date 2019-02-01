@@ -1,4 +1,4 @@
-package com.lectureSecondPart.tst;
+package com.lectureSecondPart.one.tst;
 
 public class Vehicle {
     private int maxSpeed;

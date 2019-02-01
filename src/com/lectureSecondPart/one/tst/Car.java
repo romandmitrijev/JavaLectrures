@@ -1,4 +1,4 @@
-package com.lectureSecondPart.tst;
+package com.lectureSecondPart.one.tst;
 
 public class Car extends Vehicle {
     private String name;

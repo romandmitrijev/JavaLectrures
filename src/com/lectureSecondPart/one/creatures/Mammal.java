@@ -1,4 +1,4 @@
-package com.lectureSecondPart.creatures;
+package com.lectureSecondPart.one.creatures;
 
 public class Mammal extends Creatures {
 

@@ -1,4 +1,4 @@
-package com.lectureSecondPart.sorting;
+package com.lectureSecondPart.one.sorting;
 
 public class BubbleSorting extends ArraySorting {
     @Override
