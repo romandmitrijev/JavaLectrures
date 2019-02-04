@@ -14,7 +14,20 @@ public class LinkedList extends List {
 
     @Override
     public void remove(int a) {
-       // homework
+        if (first.value == a) {
+            first = first.next;
+            return;
+        }
+        Element previous = first;
+        Element current = previous.next;
+        while (current != null) {
+            if (current.value == a) {
+                previous.next = current.next;
+                break;
+            }
+            previous = current;
+            current = current.next;
+        }
 
     }
 

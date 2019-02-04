@@ -1,9 +1,15 @@
 package com.lectureSecondPart.one.lists;
 
-public class List {
-    public void add(int a){}
+public abstract class List {
+    private String name;
 
-    public void remove(int a){}
+    public abstract void add(int a);
 
-    public void print(){}
+    public abstract void remove(int a);
+
+    public abstract void print();
+
+    public void someInfo(){
+        System.out.println("Important information");
+    }
 }
