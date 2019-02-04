@@ -16,4 +16,5 @@ public class ArraySortingTest {
         System.out.println("Quick sorted array");
         arraySorting.printArray(arr1);
     }
+
 }
