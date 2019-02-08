@@ -19,11 +19,11 @@ public class SwitchOperation {
         System.out.println("What to do: 1=Adding 2=Subtraction 3=multiply 4= divide");
         int operation = scanner.nextInt();
 
-        double result=0;
-        boolean isValid=false;
-        switch (operation){
+        double result = 0;
+        boolean isValid = false;
+        switch (operation) {
             case 1:
-                result= firstNumber+secondNumber;
+                result = firstNumber + secondNumber;
                 break;
             case 2:
                 result = firstNumber - secondNumber;
@@ -32,30 +32,21 @@ public class SwitchOperation {
                 result = firstNumber * secondNumber;
                 break;
             case 4:
-                result = firstNumber /secondNumber;
+                result = firstNumber / secondNumber;
                 break;
             default:
                 System.out.println("What is it about");
-                isValid=false;
+                isValid = false;
         }
-        if(isValid){
-            System.out.println( result);
+        if (isValid) {
+            System.out.println(result);
         }
 
 
-
-
-
-
-
-
-
-
-
-        String[] someStrings = {"Apples","Oranges"};
+        String[] someStrings = {"Apples", "Oranges"};
 
         String someString = someStrings[1];
-        switch (someString){
+        switch (someString) {
             case "Apples":
                 System.out.println("Apples are here");
                 break;
