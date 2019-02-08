@@ -12,7 +12,7 @@ public class Student {
 
         while (true) {
             System.out.println("What do you want to do? Add/ Remove/ Done/ View/ Search");
-            String userInput = scanner.nextLine();
+            String userInput = scanner.next();
 
             if (userInput.equalsIgnoreCase("add")) {
                 System.out.println("Enter student name");
