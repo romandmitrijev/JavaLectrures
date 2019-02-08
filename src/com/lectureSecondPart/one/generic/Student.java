@@ -16,7 +16,7 @@ public class Student implements Comparable<Student> {
     }
 
     @Override
-    public boolean comparableTo(Student el) {
+    public int comparableTo(Student el) {
         if (this.age > el.age) {
             return 1;
         } else {

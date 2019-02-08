@@ -2,5 +2,5 @@ package com.lectureSecondPart.one.generic;
 
 public interface Comparable<T> {
 
-    boolean comparableTo(T el);
+    int comparableTo(T el);
 }
