@@ -1,5 +1,6 @@
 package com.lectureSecondPart.one.concurrency;
 
+
 public class Bench {
     private int availableSeats;
 
@@ -8,12 +9,15 @@ public class Bench {
     }
 
     public void takeASeat() {
-        if (availableSeats > 0) {
-            System.out.println("Taking a seat...");
-            availableSeats--;
-            System.out.println("Free seats left: " + availableSeats);
-        } else {
-            System.out.println("There is no available seats");
+
+        synchronized (this){
+            if (availableSeats > 0) {
+                System.out.println("Taking a seat...");
+                availableSeats--;
+                System.out.println("Free seats left: " + availableSeats);
+            } else {
+                System.out.println("There is no available seats");
+            }
         }
     }
 
