@@ -1,15 +1,17 @@
 package com.lectureSecondPart.one.concurrency.seven;
 
 public class BankThread extends Thread {
-    private Account account;
 
-    public BankThread(Account account) {
+    private Account account;
+    private String threadName;
+    public BankThread(String threadName, Account account) {
+        this.threadName = threadName;
         this.account = account;
     }
 
     @Override
     public void run() {
-        account.increment();
-        System.out.println("UniqueId: " + account.getUniqueId());
+        account.increment(threadName);
     }
 }
+

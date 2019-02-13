@@ -1,16 +1,17 @@
 package com.lectureSecondPart.one.concurrency.seven;
 
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class Account {
     private AtomicInteger uniqueId = new AtomicInteger();
-    private Lock lock = new ReentrantLock();
 
-
-    public void increment(){
-        uniqueId.incrementAndGet();
+    public void increment(String threadName){
+        System.out.println("Before the increment, thread name:"+ threadName +
+                " ,uniq id :" + getUniqueId());
+        System.out.println("increment part, thread name:"+ threadName +
+                ",uniq id: " + uniqueId.incrementAndGet());
+        System.out.println("After the increment, thread name:"+ threadName +
+                ",uniq id: " + getUniqueId());
     }
 
     public int getUniqueId() {
