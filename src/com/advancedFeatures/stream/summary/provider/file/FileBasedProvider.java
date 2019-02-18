@@ -3,12 +3,14 @@ package com.advancedFeatures.stream.summary.provider.file;
 import com.advancedFeatures.stream.summary.data.Country;
 import com.advancedFeatures.stream.summary.data.Person;
 import com.advancedFeatures.stream.summary.provider.PersonDataProvider;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FileBasedProvider implements PersonDataProvider {
 
@@ -26,20 +28,35 @@ public class FileBasedProvider implements PersonDataProvider {
         }
     }
 
-    @Override
-    public Collection<Person> findAll() {
-        return null;//homework
-    }
-
-    @Override
-    public Collection<Person> search(String firstName, String lastName, Boolean eu, int minimumAge) {
-        return null;//homework
-    }
-
     private Function<String, Person> mapToItem = (line) -> {
         String[] p = line.split(","); // a csv has comma separated
         Person person = new Person(p[0], p[1], Country.valueOf(p[2]), Integer.parseInt(p[3]));
         return person;
     };
+
+    @Override
+    public Collection<Person> findAll() {
+
+        return myPeople;
+    }
+
+    @Override
+    public Collection<Person> search(String firstName, String lastName, Boolean eu, int minimumAge) {
+        Stream<Person> peopleStream = myPeople.stream();
+
+        if (firstName != null)
+            peopleStream = peopleStream.filter(person -> person.getFirstName().equals(firstName));
+        if (lastName != null)
+            peopleStream = peopleStream.filter(person -> person.getLastName().equals(lastName));
+        if (minimumAge > 0)
+            peopleStream = peopleStream.filter(person -> person.getAge() >= minimumAge);
+        if (eu != null)
+            peopleStream = peopleStream.filter(person -> person.getCountry().isEu() == eu.booleanValue());
+
+        return peopleStream.collect(Collectors.toList());
+
+        //todo add groupByCountry, searchByName, getAvgAge
+    }
+
 
 }
