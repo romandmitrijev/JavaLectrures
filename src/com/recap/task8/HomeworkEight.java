@@ -1,6 +1,6 @@
 package com.recap.task8;
 
-import com.lecture.twelve.SuperMarketUtilities;
+import com.basic.twelve.SuperMarketUtilities;
 
 import java.util.Scanner;
 
