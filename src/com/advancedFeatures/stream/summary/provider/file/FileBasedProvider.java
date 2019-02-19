@@ -8,6 +8,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.OptionalDouble;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -58,5 +59,18 @@ public class FileBasedProvider implements PersonDataProvider {
         //todo add groupByCountry, searchByName, getAvgAge
     }
 
+    public Collection<Person> groupByCountry (Country country){
+        Stream<Person> peopleStream = myPeople.stream();
+        if (country != null)
+            peopleStream = peopleStream.filter(person -> person.getCountry().equals(country));
+        return peopleStream.collect(Collectors.toList());
+    }
+
+    public Collection<Person> getAvgAge (int age){
+        Stream<Person> peopleStream = myPeople.stream();
+        if (age !=0)
+            peopleStream = peopleStream.mapToInt(Person::getAge).average(age);
+        return peopleStream.collect(Collectors.toList());
+    }
 
 }
